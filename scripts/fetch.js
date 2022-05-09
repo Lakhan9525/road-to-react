@@ -1,15 +1,15 @@
 let searchImages= async (api,value)=>{
     
-    //let value =document.getElementById("query").value;
+
     try{
        let res= await fetch(
-        `https://api.unsplash.com/search/photos/?query=${value}&per_page=20&client_id=${api}`     
+        `https://api.unsplash.com/search/photos/?query=${value}&per_page=20&order_by=popular&orientation=landscape&client_id=${api}`     
        )
        let data=await res.json()
        //console.log(data)
        return data
     }catch(err){
-        console.log(err);
+        console.log("err:",err);
     }
 }
 

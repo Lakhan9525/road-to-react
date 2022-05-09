@@ -1,5 +1,5 @@
 // Links-
-let api="xCXNIzAHHxTEZvmO1FHZmHehbv_ledkWi79vCv18vJs"
+let API="xCXNIzAHHxTEZvmO1FHZmHehbv_ledkWi79vCv18vJs"
    
 import { navbar } from "../components/navbar.js";
 let na=document.getElementById("navbar");
@@ -9,7 +9,7 @@ import {searchImages,append}from"./fetch.js";
 let search=(e)=>{
     if(e.key==="Enter"){
         let value=document.getElementById("query").value;
-        searchImages(api,value).then((data) =>{
+        searchImages(API,value).then((data) =>{
         console.log(data);
         let container=document.getElementById("container");
         container.innerHTML="";
@@ -25,7 +25,7 @@ let search=(e)=>{
 
  function cSearch(){
     console.log(this.id);
-    searchImages(api,this.id).then((data) =>{
+    searchImages(API,this.id).then((data) =>{
         console.log(data);
         let container=document.getElementById("container");
         container.innerHTML="";
@@ -36,11 +36,3 @@ let search=(e)=>{
  for(let el of categories){
     el.addEventListener("click",cSearch);
 }
-
-//  h3={
-//      id:"nature"
-//      cSearch()
-//  }
-// let searchImages=async () =>{
-
-// }
